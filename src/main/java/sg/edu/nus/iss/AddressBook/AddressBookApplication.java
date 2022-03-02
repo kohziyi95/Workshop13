@@ -1,4 +1,4 @@
-package com.nus.iss.edu.sg.AddressBook;
+package sg.edu.nus.iss.AddressBook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
