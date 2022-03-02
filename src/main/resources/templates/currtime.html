@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>Hello World</p>
+
+    <p>ID: <span th:text="${person.id}"></span></p>
+    <p>First Name: <span th:text="${person.firstName}"></span></p>
+    <p>Last Name: <span th:text="${person.lastName}"></span></p>
+    <p>Gender: <span th:text="${person.gender}"></span></p>
+
+    <hr>
+
+    <tbody>
+        <tr th:each="person : ${allPerson}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.firstName}"></td>
+            <td th:text="${person.lastName}"></td>
+            <!-- <td th:text="${person.gender}"></td> -->
+
+            <td>
+                <span th:if="${person.gender} == 'M'" th:text="Male"/>
+                <span th:unless="${person.gender} == 'M'" th:text="Female"/>
+            </td>
+            <br>
+        </tr>
+    </tbody>
+
+    
+</body>
+</html>
